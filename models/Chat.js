@@ -1,5 +1,8 @@
 const { Sequelize, DataTypes } = require('sequelize');
-const sequelize = new Sequelize('sqlite::memory:');
+const sequelize = new Sequelize({
+  dialect: 'sqlite',
+  storage: 'C:\\Users\\E20220606\\Desktop\\ChatBotstjo-main\\chatbotback\\DB\\database.sqlite' // Remplacez par le chemin d'accès à votre fichier de base de données SQLite
+});
 
 const Chat = sequelize.define('Chat', {
   // Model attributes are defined here
